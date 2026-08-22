@@ -1,0 +1,129 @@
+<!-- calendario.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendário - E.E.E.I. Prof. Joaquim Andrade Meirelles</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-container">
+    <a href="index.html" class="logo-link">
+      <div class="logo-placeholder">LOGO</div> <!--aqui virá a imagem (tentei fazer mas dever ter que mexer em algo do css então não consegui )-->
+      <span class="school-name">E.E.E.I. Prof. Joaquim Andrade Meirelles</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="mainNav">
+      <a href="index.html">Início</a>
+      <a href="equipe.html">Equipe</a>
+      <a href="calendario.html" class="active">Calendário</a>
+      <a href="interclasse.html">Interclasse</a>
+      <a href="contatos.html">Contatos</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-title">
+    <h1>Calendário Escolar</h1>
+    <p>Confira os principais eventos da escola. Você também pode consultar o calendário específico da sua turma (em breve).</p>
+  </section>
+
+  <section class="calendar-select-hint">
+    <label for="turmaSelect">Visualizar calendário de:</label>
+    <select id="turmaSelect" disabled>
+      <option>Calendário geral</option> <!--essa parte é o seletor de turmas, que precisa do java funcionando, e eu não consegui essa parte, além de precisar
+      arrumar para funcionar, ainda é preciso criar os caledarios por turma, eu deixaria por ultimo, por n ser algo muito importante-->
+      <option>1º A</option>
+      <option>1º B</option>
+      <option>1º C</option>
+      <option>2º A</option>
+      <option>2º B</option>
+      <option>2º C</option>
+      <option>3º A</option>
+      <option>3º B</option>
+      <option>3º C</option>
+    </select>
+    <span class="soon-tag">Disponível na próxima versão</span>
+  </section>
+
+  <section class="calendar-wrapper">
+    <div class="calendar-header">
+      <h2>Setembro de 2026</h2>
+    </div>
+
+    <div class="calendar-grid">
+      <div class="calendar-day-name">Dom</div>
+      <div class="calendar-day-name">Seg</div>
+      <div class="calendar-day-name">Ter</div>
+      <div class="calendar-day-name">Qua</div>
+      <div class="calendar-day-name">Qui</div>
+      <div class="calendar-day-name">Sex</div>
+      <div class="calendar-day-name">Sáb</div>
+
+      <div class="calendar-day empty"></div>
+      <div class="calendar-day empty"></div>
+      <div class="calendar-day"><span class="day-number">1</span></div>
+      <div class="calendar-day"><span class="day-number">2</span></div>
+      <div class="calendar-day"><span class="day-number">3</span></div>
+      <div class="calendar-day"><span class="day-number">4</span></div>
+      <div class="calendar-day"><span class="day-number">5</span></div>
+
+      <div class="calendar-day"><span class="day-number">6</span></div>
+      <div class="calendar-day"><span class="day-number">7</span><span class="event-dot event-geral" title="Feriado - Independência">Feriado</span></div>
+      <div class="calendar-day"><span class="day-number">8</span></div>
+      <div class="calendar-day"><span class="day-number">9</span></div>
+      <div class="calendar-day"><span class="day-number">10</span></div>
+      <div class="calendar-day"><span class="day-number">11</span></div>
+      <div class="calendar-day"><span class="day-number">12</span></div>
+
+      <div class="calendar-day"><span class="day-number">13</span></div>
+      <div class="calendar-day"><span class="day-number">14</span></div>
+      <div class="calendar-day"><span class="day-number">15</span><span class="event-dot event-jogo" title="Futsal 2A x 3C">Jogo</span></div>
+      <div class="calendar-day"><span class="day-number">16</span></div>
+      <div class="calendar-day"><span class="day-number">17</span></div>
+      <div class="calendar-day"><span class="day-number">18</span><span class="event-dot event-prova" title="Prova de Biologia">Prova</span></div>
+      <div class="calendar-day"><span class="day-number">19</span></div>
+
+      <div class="calendar-day"><span class="day-number">20</span></div>
+      <div class="calendar-day"><span class="day-number">21</span></div>
+      <div class="calendar-day"><span class="day-number">22</span></div>
+      <div class="calendar-day"><span class="day-number">23</span></div>
+      <div class="calendar-day"><span class="day-number">24</span><span class="event-dot event-reuniao" title="Reunião de Pais">Reunião</span></div>
+      <div class="calendar-day"><span class="day-number">25</span></div>
+      <div class="calendar-day"><span class="day-number">26</span></div>
+
+      <div class="calendar-day"><span class="day-number">27</span></div>
+      <div class="calendar-day"><span class="day-number">28</span></div>
+      <div class="calendar-day"><span class="day-number">29</span></div>
+      <div class="calendar-day"><span class="day-number">30</span></div>
+      <div class="calendar-day empty"></div>
+      <div class="calendar-day empty"></div>
+      <div class="calendar-day empty"></div>
+    </div>
+
+    <div class="calendar-legend">
+      <span class="legend-item"><span class="legend-dot event-geral"></span> Evento geral</span>
+      <span class="legend-item"><span class="legend-dot event-prova"></span> Prova / Avaliação</span>
+      <span class="legend-item"><span class="legend-dot event-trabalho"></span> Trabalho / Tarefa</span>
+      <span class="legend-item"><span class="legend-dot event-jogo"></span> Jogo / Interclasse</span>
+      <span class="legend-item"><span class="legend-dot event-reuniao"></span> Reunião</span>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <h3>E.E.E.I. Professor Joaquim Andrade Meirelles</h3>
+    <p>Rua Maranduba, s/n, Jardim Satélite, São José dos Campos - SP</p>
+    <p>Tel: (12) 3933-0993 | E-mail: e035373a@educacao.sp.gov.br</p>
+  </div>
+</footer>
+
+</body>
+</html>
