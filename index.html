@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,7 +11,7 @@
 <header class="header">
   <div class="header-container">
     <a href="index.html" class="logo-link">
-      <div class="logo-placeholder">LOGO</div> <!--aqui virá a imagem (tentei fazer mas dever ter que mexer em algo do css então não consegui )-->
+      <img src="img/Logo Meirelles.png" alt="Logo da Escola" class="logo-img">
       <span class="school-name">E.E.E.I. Prof. Joaquim Andrade Meirelles</span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
@@ -24,6 +23,7 @@
       <a href="calendario.html">Calendário</a>
       <a href="interclasse.html">Interclasse</a>
       <a href="contatos.html">Contatos</a>
+      <a href="#" class="btn-login">Login</a>
     </nav>
   </div>
 </header>
@@ -35,17 +35,17 @@
   </section>
 
   <section class="filters">
-    <button class="filter-btn active">Todos</button>
-    <button class="filter-btn">Comunicados</button>
-    <button class="filter-btn">Gabaritos</button>
-    <button class="filter-btn">Editais</button>
-    <button class="filter-btn">Eventos</button>
+    <button class="filter-btn active" data-filter="todos">Todos</button>
+    <button class="filter-btn" data-filter="comunicado">Comunicados</button>
+    <button class="filter-btn" data-filter="gabarito">Gabaritos</button>
+    <button class="filter-btn" data-filter="edital">Editais</button>
+    <button class="filter-btn" data-filter="evento">Eventos</button>
   </section>
 
   <section class="posts-grid">
 
-    <article class="post-card">
-      <div class="post-image-placeholder">FOTO</div> <!--aqui virá a imagem (tentei fazer mas dever ter que mexer em algo do css então não consegui )-->
+    <article class="post-card" data-category="edital">
+      <img src="img/edital 1bim.png" alt="Edital de Provas" class="post-image">
       <div class="post-content">
         <span class="post-tag tag-edital">Edital</span>
         <h3>Edital das Provas do 1º Bimestre</h3>
@@ -55,8 +55,8 @@
       </div>
     </article>
 
-    <article class="post-card">
-      <div class="post-image-placeholder">FOTO</div> <!--aqui virá a imagem (tentei fazer mas dever ter que mexer em algo do css então não consegui )-->
+    <article class="post-card" data-category="gabarito">
+      <img src="img/gabarito simulado geral.png" alt="Gabarito do Simulado" class="post-image">
       <div class="post-content">
         <span class="post-tag tag-gabarito">Gabarito</span>
         <h3>Gabarito - Simulado Geral</h3>
@@ -66,8 +66,8 @@
       </div>
     </article>
 
-    <article class="post-card">
-      <div class="post-image-placeholder">FOTO</div> <!--aqui virá a imagem (tentei fazer mas dever ter que mexer em algo do css então não consegui )-->
+    <article class="post-card" data-category="comunicado">
+      <img src="img/reuniao pr.jpg" alt="Reunião de Pais" class="post-image">
       <div class="post-content">
         <span class="post-tag tag-comunicado">Comunicado</span>
         <h3>Reunião de Pais e Responsáveis</h3>
@@ -77,8 +77,8 @@
       </div>
     </article>
 
-    <article class="post-card">
-      <div class="post-image-placeholder">FOTO</div> <!--aqui virá a imagem (tentei fazer mas dever ter que mexer em algo do css então não consegui )-->
+    <article class="post-card" data-category="evento">
+      <img src="img/interclasse.jpg" alt="Interclasse 2026" class="post-image">
       <div class="post-content">
         <span class="post-tag tag-evento">Evento</span>
         <h3>Interclasse 2026 - Abertura</h3>
@@ -88,8 +88,8 @@
       </div>
     </article>
 
-    <article class="post-card">
-      <div class="post-image-placeholder">FOTO</div> <!--aqui virá a imagem (tentei fazer mas dever ter que mexer em algo do css então não consegui )-->
+    <article class="post-card" data-category="comunicado">
+      <img src="img/calendario 2sem.jpg" alt="Calendário Semestral" class="post-image">
       <div class="post-content">
         <span class="post-tag tag-comunicado">Comunicado</span>
         <h3>Calendário do 2º Semestre</h3>
@@ -99,8 +99,8 @@
       </div>
     </article>
 
-    <article class="post-card">
-      <div class="post-image-placeholder">FOTO</div> <!--aqui virá a imagem (tentei fazer mas dever ter que mexer em algo do css então não consegui )-->
+    <article class="post-card" data-category="edital">
+      <img src="img/matricula 2027.jpg" alt="Matrículas 2027" class="post-image">
       <div class="post-content">
         <span class="post-tag tag-edital">Edital</span>
         <h3>Edital de Matrículas 2027</h3>
@@ -121,5 +121,6 @@
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
