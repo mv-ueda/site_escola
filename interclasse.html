@@ -1,4 +1,3 @@
-<!-- interclasse.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,7 +11,7 @@
 <header class="header">
   <div class="header-container">
     <a href="index.html" class="logo-link">
-      <div class="logo-placeholder">LOGO</div> <!--aqui virá a imagem (tentei fazer mas dever ter que mexer em algo do css então não consegui )-->
+      <img src="img/Logo Meirelles.png" alt="Logotipo azul e branco da Escola Meirelles: um escudo com as iniciais estilizadas M, cercado por ramos de louro sobre fundo transparente, transmitindo uma identidade institucional e acolhedora" class="logo-img">
       <span class="school-name">E.E.E.I. Prof. Joaquim Andrade Meirelles</span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
@@ -24,6 +23,7 @@
       <a href="calendario.html">Calendário</a>
       <a href="interclasse.html" class="active">Interclasse</a>
       <a href="contatos.html">Contatos</a>
+      <a href="#" class="btn-login">Login</a>
     </nav>
   </div>
 </header>
@@ -41,7 +41,6 @@
 
   <!-- FUTSAL -->
   <section class="sport-content" id="futsal">
-
     <h2 class="section-heading">Classificação - Futsal</h2>
     <div class="table-wrapper">
       <table class="ranking-table">
@@ -59,7 +58,7 @@
             <th>Pts</th>
           </tr>
         </thead>
-        <tbody> <!-- Tabela do futsal (colocação - turma - jogos disputados - vitorias - empates - derrotas - gols feitos - gols sofridos - saldo - pontos)-->
+        <tbody>
           <tr><td>1</td><td>3ºA</td><td>4</td><td>3</td><td>1</td><td>0</td><td>12</td><td>4</td><td>+8</td><td>10</td></tr>
           <tr><td>2</td><td>2ºB</td><td>4</td><td>3</td><td>0</td><td>1</td><td>10</td><td>6</td><td>+4</td><td>9</td></tr>
           <tr><td>3</td><td>3ºC</td><td>4</td><td>2</td><td>1</td><td>1</td><td>8</td><td>7</td><td>+1</td><td>7</td></tr>
@@ -128,12 +127,10 @@
         <p class="match-scorers">Gols: Marcos (2ºB) x2</p>
       </div>
     </div>
-
   </section>
 
   <!-- VOLEI -->
   <section class="sport-content" id="volei" style="display:none;">
-
     <h2 class="section-heading">Classificação - Vôlei</h2>
     <div class="table-wrapper">
       <table class="ranking-table">
@@ -150,7 +147,7 @@
             <th>Pts</th>
           </tr>
         </thead>
-        <tbody> <!-- Tabela volei, Colocação - turma - jogos disputados - vitorias - derrotas - sets vencidos - sets perdidos - saldo de sets - pontos -->
+        <tbody>
           <tr><td>1</td><td>3ºC</td><td>4</td><td>4</td><td>0</td><td>9</td><td>3</td><td>+6</td><td>12</td></tr>
           <tr><td>2</td><td>3ºA</td><td>4</td><td>3</td><td>1</td><td>8</td><td>4</td><td>+4</td><td>9</td></tr>
           <tr><td>3</td><td>2ºA</td><td>4</td><td>2</td><td>2</td><td>6</td><td>7</td><td>-1</td><td>6</td></tr>
@@ -183,7 +180,6 @@
         <p class="match-sets">Sets: 21-19, 18-21, 21-17, 21-15</p>
       </div>
     </div>
-
   </section>
 </main>
 
@@ -195,5 +191,6 @@
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
