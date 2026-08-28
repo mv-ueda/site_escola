@@ -1,4 +1,3 @@
-<!-- calendario.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,7 +11,7 @@
 <header class="header">
   <div class="header-container">
     <a href="index.html" class="logo-link">
-      <div class="logo-placeholder">LOGO</div> <!--aqui virá a imagem (tentei fazer mas dever ter que mexer em algo do css então não consegui )-->
+      <img src="img/Logo Meirelles.png" alt="Brasão da escola formado por um escudo azul com contorno branco, a letra M estilizada em branco no centro e ramos de louro azuis ao redor. O símbolo apresenta aparência formal e acolhedora e representa a identidade da escola." class="logo-img">
       <span class="school-name">E.E.E.I. Prof. Joaquim Andrade Meirelles</span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
@@ -24,6 +23,7 @@
       <a href="calendario.html" class="active">Calendário</a>
       <a href="interclasse.html">Interclasse</a>
       <a href="contatos.html">Contatos</a>
+      <a href="#" class="btn-login">Login</a>
     </nav>
   </div>
 </header>
@@ -31,25 +31,23 @@
 <main>
   <section class="page-title">
     <h1>Calendário Escolar</h1>
-    <p>Confira os principais eventos da escola. Você também pode consultar o calendário específico da sua turma (em breve).</p>
+    <p>Confira os principais eventos da escola ou filtre pelos eventos da sua turma.</p>
   </section>
 
   <section class="calendar-select-hint">
     <label for="turmaSelect">Visualizar calendário de:</label>
-    <select id="turmaSelect" disabled>
-      <option>Calendário geral</option> <!--essa parte é o seletor de turmas, que precisa do java funcionando, e eu não consegui essa parte, além de precisar
-      arrumar para funcionar, ainda é preciso criar os caledarios por turma, eu deixaria por ultimo, por n ser algo muito importante-->
-      <option>1º A</option>
-      <option>1º B</option>
-      <option>1º C</option>
-      <option>2º A</option>
-      <option>2º B</option>
-      <option>2º C</option>
-      <option>3º A</option>
-      <option>3º B</option>
-      <option>3º C</option>
+    <select id="turmaSelect">
+      <option value="geral">Calendário geral</option>
+      <option value="1º A">1º A</option>
+      <option value="1º B">1º B</option>
+      <option value="1º C">1º C</option>
+      <option value="2º A">2º A</option>
+      <option value="2º B">2º B</option>
+      <option value="2º C">2º C</option>
+      <option value="3º A">3º A</option>
+      <option value="3º B">3º B</option>
+      <option value="3º C">3º C</option>
     </select>
-    <span class="soon-tag">Disponível na próxima versão</span>
   </section>
 
   <section class="calendar-wrapper">
@@ -125,5 +123,6 @@
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
