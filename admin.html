@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel administrativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+        if (sessionStorage.getItem("adminAutorizado") !== "true") {
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <header class="admin-header">
+        <img 
+            src="imagens/logo-simples.png" 
+            alt="Logo da escola"
+        >
+
+        <div>
+            <span id="nomeAdministrador"></span>
+            <button id="btnSair">Sair</button>
+        </div>
+    </header>
+
+    <main class="admin-container">
+        <h1>Painel administrativo</h1>
+        <p>Gerencie as informações exibidas no portal escolar.</p>
+
+        <section class="admin-menu">
+            <button onclick="mostrarSecao('posts')">
+                Gerenciar posts
+            </button>
+
+            <button onclick="mostrarSecao('calendario')">
+                Gerenciar calendário
+            </button>
+
+            <button onclick="mostrarSecao('equipe')">
+                Gerenciar equipe
+            </button>
+
+            <button onclick="mostrarSecao('interclasse')">
+                Gerenciar interclasse
+            </button>
+        </section>
+
+        <section id="posts" class="admin-secao">
+            <h2>Posts do blog</h2>
+            <p>Aqui ficará o cadastro, edição e exclusão dos posts.</p>
+        </section>
+
+        <section id="calendario" class="admin-secao">
+            <h2>Calendário escolar</h2>
+            <p>Aqui ficarão eventos, tarefas, trabalhos e jogos.</p>
+        </section>
+
+        <section id="equipe" class="admin-secao">
+            <h2>Profissionais da escola</h2>
+            <p>Aqui será possível cadastrar e editar funcionários.</p>
+        </section>
+
+        <section id="interclasse" class="admin-secao">
+            <h2>Interclasse</h2>
+            <p>Aqui serão gerenciados jogos e classificação.</p>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>
