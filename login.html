@@ -3,45 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acesso administrativo</title>
+
+    <title>Portal administrativo | Escola</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <main class="login-container">
-        <section class="login-card">
-            <img 
-                src="imagens/logo-completa.png" 
-                alt="Logo da escola"
-                class="login-logo"
-            >
+<body class="login-page">
 
-            <h1>Portal administrativo</h1>
-            <p>Informe os dados de acesso para continuar.</p>
+    <main class="login-wrapper">
+        <section class="login-card" aria-labelledby="titulo-login">
 
-            <form id="loginForm">
-                <label for="nome">Nome de usuário</label>
-                <input 
-                    type="text" 
-                    id="nome" 
-                    name="nome"
-                    placeholder="Digite seu nome"
-                    required
+            <div class="login-brand">
+                <img 
+                    src="img/Logo Meirelles.png"
+                    alt="Logo da escola"
+                    class="login-logo"
                 >
+            </div>
 
-                <label for="senha">Senha</label>
-                <input 
-                    type="password" 
-                    id="senha" 
-                    name="senha"
-                    placeholder="Digite sua senha"
-                    required
-                >
+            <h1 id="titulo-login">Portal administrativo</h1>
 
-                <button type="submit">Entrar</button>
+            <p class="login-subtitle">
+                Acesse o painel de gerenciamento da escola
+            </p>
 
-                <p id="mensagemLogin" class="mensagem-login"></p>
+            <form id="loginForm" class="login-form">
+
+                <div class="form-group">
+                    <label for="nome">Nome de usuário</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome de usuário"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <div class="login-options">
+                    <label class="remember-option">
+                        <input type="checkbox" id="lembrarAcesso">
+                        <span>Lembrar acesso</span>
+                    </label>
+
+                    <button
+                        type="button"
+                        id="btnEsqueciSenha"
+                        class="forgot-password"
+                    >
+                        Esqueci a senha
+                    </button>
+                </div>
+
+                <button type="submit" class="login-button">
+                    Entrar
+                </button>
+
+                <p
+                    id="mensagemLogin"
+                    class="mensagem-login"
+                    role="alert"
+                    aria-live="polite"
+                ></p>
+
             </form>
+
+            <a href="index.html" class="back-to-site">
+                Voltar para o site
+            </a>
+
         </section>
     </main>
 
